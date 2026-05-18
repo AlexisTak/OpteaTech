@@ -41,3 +41,13 @@ api/vendor/
 # Tauri
 apps/desktop/src-tauri/target/
 apps/desktop/dist/
+
+# User-specific settings
+.claude/settings.local.json
+
+# Generated build artifacts
+*.tsbuildinfo
+vite-env.d.ts
+
+# Tauri generated
+apps/desktop/src-tauri/gen/
