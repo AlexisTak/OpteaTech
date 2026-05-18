@@ -1,0 +1,21 @@
+{
+  "name": "optea-tech",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently \"pnpm dev:api\" \"pnpm dev:web\" \"pnpm dev:admin\"",
+    "dev:api": "cd api && go run ./cmd/server",
+    "dev:web": "pnpm --filter @optea/web dev",
+    "dev:admin": "pnpm --filter @optea/admin dev",
+    "build": "pnpm build:web && pnpm build:admin",
+    "build:web": "pnpm --filter @optea/web build",
+    "build:admin": "pnpm --filter @optea/admin build",
+    "lint": "pnpm lint:web && pnpm lint:admin",
+    "lint:web": "pnpm --filter @optea/web lint",
+    "lint:admin": "pnpm --filter @optea/admin lint"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "packageManager": "pnpm@9.0.0"
+}

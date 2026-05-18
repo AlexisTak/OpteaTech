@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(superpowers:writing-plans)",
+      "Skill(superpowers:brainstorming)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'docs: add Go API + Next.js proxy + Tauri architecture design *)"
+    ]
+  }
+}

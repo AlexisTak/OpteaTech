@@ -1,0 +1,35 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "optea.tech Admin",
+  "version": "0.1.0",
+  "identifier": "fr.opteatech.admin",
+  "build": {
+    "beforeDevCommand": "pnpm dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "pnpm build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "optea.tech",
+        "width": 1280,
+        "height": 800,
+        "minWidth": 900,
+        "minHeight": 600,
+        "decorations": false,
+        "resizable": true,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self' http://localhost:1420 https://api.opteatech.fr; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["dmg", "deb", "appimage"],
+    "icon": []
+  }
+}
